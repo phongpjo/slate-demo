@@ -289,9 +289,10 @@
     <script>
       $(function() { setupCodeCopy(); });
     </script>
+    <link href="images/favicon-b2dc0811.ico" rel="icon" type="image/ico" />
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -299,12 +300,9 @@
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo-1e815a84.png" class="logo" alt="" />
+      <img src="images/logo-49244dd3.png" class="logo" alt="" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -312,282 +310,743 @@
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
+            <a href="#api-v1" class="toc-h1 toc-link" data-title="API v1">API v1</a>
+          </li>
+          <li>
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#following-module" class="toc-h1 toc-link" data-title="Following module">Following module</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#follow" class="toc-h2 toc-link" data-title="Follow">Follow</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#unfollow" class="toc-h2 toc-link" data-title="Unfollow">Unfollow</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#rating-module" class="toc-h1 toc-link" data-title="Rating module">Rating module</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#hi-n-th-thong-tin-danh-gia-trader" class="toc-h2 toc-link" data-title="Hiển thị thông tin đánh giá trader">Hiển thị thông tin đánh giá trader</a>
+                  </li>
+                  <li>
+                    <a href="#danh-gia-trader" class="toc-h2 toc-link" data-title="Đánh giá Trader">Đánh giá Trader</a>
+                  </li>
+                  <li>
+                    <a href="#xoa-danh-gia-trader" class="toc-h2 toc-link" data-title="Xóa đánh giá trader">Xóa đánh giá trader</a>
+                  </li>
+                  <li>
+                    <a href="#ph-n-h-i-danh-gia-c-a-trader" class="toc-h2 toc-link" data-title="Phản hồi đánh giá của trader">Phản hồi đánh giá của trader</a>
+                  </li>
+                  <li>
+                    <a href="#s-a-ph-n-h-i-danh-gia-c-a-trader-theo-id" class="toc-h2 toc-link" data-title="Sửa phản hồi đánh giá của trader theo ID">Sửa phản hồi đánh giá của trader theo ID</a>
+                  </li>
+                  <li>
+                    <a href="#xoa-toan-b-ph-n-h-i-danh-gia-c-a-trader" class="toc-h2 toc-link" data-title="Xóa toàn bộ phản hồi đánh giá của trader">Xóa toàn bộ phản hồi đánh giá của trader</a>
+                  </li>
+                  <li>
+                    <a href="#xoa-1-ph-n-h-i-danh-gia-c-a-trader-theo-id" class="toc-h2 toc-link" data-title="Xóa 1 phản hồi đánh giá của trader theo ID">Xóa 1 phản hồi đánh giá của trader theo ID</a>
+                  </li>
+              </ul>
           </li>
       </ul>
-        <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
-        </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+        <h1 id='api-v1'>API v1</h1><h1 id='introduction'>Introduction</h1>
 
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>This is API Documentation for iCopy</p>
 
-<p>This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
+<p><h1 id='following-module'>Following module</h1><h2 id='follow'>Follow</h2>
 <blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<p>This is example curl:</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
+<p></blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--location</span> <span class="nt">--request</span> POST <span class="s1">&#39;https://apiextsit.tcbs.com.vn/icopy/relation/v1/copiers/follow&#39;</span> <span class="se">&lt;/span&gt;
+<span class="nt">--header</span> <span class="s1">&#39;Authorization: Bearer JWT&#39;</span> <span class="se">&lt;/span&gt;
+<span class="nt">--header</span> <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="se">&lt;/span&gt;
+<span class="nt">--data-raw</span> <span class="s1">&#39;{
+ &quot;followerTcbsId&quot;: &quot;0001409989&quot;,
+ &quot;traderId&quot;: 123
+}&#39;</span>
 </code></pre></div>
 <blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
+<p>This is example response:</p>
 </blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">&quot;followerId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;traderId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http-request'>HTTP Request</h3>
+<p><code>POST /account-relation/e/v1/copiers/follow</code></p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>reqDto * <br/> object <br/> (body)</td>
+<td>request dto</td>
+</tr>
+</tbody></table>
+<h3 id='response'>Response</h3>
+<table><thead>
+<tr>
+<th>Trường</th>
+<th>Cách tính</th>
+<th>Mô tả</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>followerId</td>
+<td>ACCOUNT_RELATION.ID</td>
+<td>follow ID</td>
+</tr>
+<tr>
+<td>traderId</td>
+<td>TRADER_ACCOUNT.ID</td>
+<td>trader ID</td>
+</tr>
+</tbody></table>
+<h2 id='unfollow'>Unfollow</h2>
+<blockquote>
+<p>This is example curl:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--location</span> <span class="nt">--request</span> POST <span class="s1">&#39;https://apiextsit.tcbs.com.vn/icopy/relation/v1/copiers/follow&#39;</span> <span class="se">&lt;/span&gt;
+<span class="nt">--header</span> <span class="s1">&#39;Authorization: Bearer JWT&#39;</span> <span class="se">&lt;/span&gt;
+<span class="nt">--header</span> <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="se">&lt;/span&gt;
+<span class="nt">--data-raw</span> <span class="s1">&#39;{
+ &quot;followerTcbsId&quot;: &quot;0001409989&quot;,
+ &quot;traderId&quot;: 123
+}&#39;</span>
 </code></pre></div>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>This is example response:</p>
 </blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">&quot;followerId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;traderId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST /account-relation/e/v1/copiers/un-follow</code></p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>reqDto * <br/> object <br/> (body)</td>
+<td>request dto</td>
+</tr>
+</tbody></table>
+<h3 id='response-2'>Response</h3>
+<table><thead>
+<tr>
+<th>Trường</th>
+<th>Cách tính</th>
+<th>Mô tả</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>followerId</td>
+<td>ACCOUNT_RELATION.ID</td>
+<td>follow ID</td>
+</tr>
+<tr>
+<td>traderId</td>
+<td>TRADER_ACCOUNT.ID</td>
+<td>trader ID</td>
+</tr>
+</tbody></table></p></p>
+
+<p><h1 id='rating-module'>Rating module</h1><h2 id='hi-n-th-thong-tin-danh-gia-trader'>Hiển thị thông tin đánh giá trader</h2>
+<blockquote>
+<p>This is example curl:</p>
+
+<p></blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--location</span> <span class="nt">--request</span> GET <span class="s1">&#39;https://apiextsit.tcbs.com.vn/icopy/relation/v1/traders/0001098985/rating?ratingTcbsId=0001409989&#39;</span> <span class="se">&lt;/span&gt;
+<span class="nt">--header</span> <span class="s1">&#39;Accept-language: vi&#39;</span> <span class="se">&lt;/span&gt;
+<span class="nt">--header</span> <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="se">&lt;/span&gt;
+<span class="nt">--header</span> <span class="s1">&#39;Authorization: Bearer JWT&#39;</span>
+</code></pre></div>
+<blockquote>
+<p>This is example response:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">&quot;avgScore&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VERY_GOOD&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">&quot;avatar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;critical&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;You are so dep!&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;fullname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;D T L&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;ratingId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;ratingRole&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[COPIER, SUBSCRIBER]&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;ratingTcbsId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0001000012&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;replies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="nl">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;updatedTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yyyy-MM-dd HH:mm:ss&quot;</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">&quot;first&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;hasNext&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;hasPrevious&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;last&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;numberOfElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;totalElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;totalPages&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+  </span><span class="nl">&quot;rankCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;tcbsId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='http-request'>HTTP Request</h3>
+<p><code>GET /account-relation/e/v1/traders/{tcbsID}/rating</code></p>
+<h3 id='parameters'>Parameters</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default</th>
+<th>Name</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td>tcbsID * <br/> string <br/> (path)</td>
+<td>tcbsID</td>
 </tr>
 <tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>ratingTcbsId <br/> string <br/> (query)</td>
+<td>ratingTcbsId</td>
+</tr>
+<tr>
+<td>ratingRole <br/> string <br/> (query)</td>
+<td>ratingRole</td>
+</tr>
+<tr>
+<td>page <br/> integer($int32) <br/> (query)</td>
+<td>page <br/> <em>Default value</em> : 0</td>
+</tr>
+<tr>
+<td>size <br/> integer($int32) <br/> (query)</td>
+<td>size <br/> <em>Default value</em> : 0</td>
 </tr>
 </tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<h3 id='response'>Response</h3>
+<table><thead>
+<tr>
+<th>Trường</th>
+<th>Cách tính</th>
+<th>Mô tả</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>avgScore</td>
+<td>icopy.customerRatingSummary.totalScore / icopy.customerRatingSummary.totalScoring</td>
+<td>điểm trung bình</td>
+</tr>
+<tr>
+<td>code</td>
+<td></td>
+<td>code đánh giá dựa theo điểm TB</td>
+</tr>
+<tr>
+<td>rankCode</td>
+<td></td>
+<td>null</td>
+</tr>
+<tr>
+<td>tcbsId</td>
+<td>CUSTOMER_RATING.TCBSID</td>
+<td>TCBS ID của trader</td>
+</tr>
+<tr>
+<td>data.first</td>
+<td>là trang đầu tiên</td>
+<td>phân trang</td>
+</tr>
+<tr>
+<td>data.hasNext</td>
+<td>có trang tiếp theo</td>
+<td>phân trang</td>
+</tr>
+<tr>
+<td>data.hasPrevious</td>
+<td>có trang liền trước</td>
+<td>phân trang</td>
+</tr>
+<tr>
+<td>data.last</td>
+<td>là trang cuối</td>
+<td>phân trang</td>
+</tr>
+<tr>
+<td>data.number</td>
+<td>số trang</td>
+<td>phân trang</td>
+</tr>
+<tr>
+<td>data.numberOfElements</td>
+<td>số lượng trong content</td>
+<td>phân trang</td>
+</tr>
+<tr>
+<td>data.size</td>
+<td>kích thước trang</td>
+<td>phân trang</td>
+</tr>
+<tr>
+<td>data.totalElements</td>
+<td>tổng số phần tử</td>
+<td>phân trang</td>
+</tr>
+<tr>
+<td>data.totalPages</td>
+<td>tổng số trang</td>
+<td>phân trang</td>
+</tr>
+<tr>
+<td>data.content.avatar</td>
+<td>icopy.traderListingItem.accountInfo.avatar</td>
+<td>avatar người đánh giá</td>
+</tr>
+<tr>
+<td>data.content.critical</td>
+<td>CUSTOMER_RATING.CRITICAL</td>
+<td>nội dung đánh giá</td>
+</tr>
+<tr>
+<td>data.content.fullname</td>
+<td>icopy.traderListingItem.accountInfo.fullname</td>
+<td>tên người đánh giá</td>
+</tr>
+<tr>
+<td>data.content.ratingId</td>
+<td>CUSTOMER_RATING.ID</td>
+<td>ID</td>
+</tr>
+<tr>
+<td>data.content.ratingRole</td>
+<td>CUSTOMER_RATING.RATING_ROLE</td>
+<td>role (COPIER/SUBSCRIBER )</td>
+</tr>
+<tr>
+<td>data.content.ratingTcbsId</td>
+<td>CUSTOMER_RATING.RATING_TCBSID</td>
+<td>TCBSID của trader</td>
+</tr>
+<tr>
+<td>data.content.score</td>
+<td>CUSTOMER_RATING.SCORE</td>
+<td>điểm</td>
+</tr>
+<tr>
+<td>data.content.updatedTime</td>
+<td>CUSTOMER_RATING.UPDATED_TIME</td>
+<td>timestamp</td>
+</tr>
+<tr>
+<td>data.content.replies</td>
+<td>MESSAGE_REPLY</td>
+<td>danh sách các reply của trader, object tương tự Phản hồi đánh giá của trader</td>
+</tr>
+</tbody></table>
+<h2 id='danh-gia-trader'>Đánh giá Trader</h2>
+<blockquote>
+<p>This is example curl:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--location</span> <span class="nt">--request</span> GET <span class="s1">&#39;https://apiextsit.tcbs.com.vn/icopy/relation/v1/traders/0001098985/rating?ratingTcbsId=0001409989&#39;</span> <span class="se">&lt;/span&gt;
+<span class="nt">--header</span> <span class="s1">&#39;Accept-language: vi&#39;</span> <span class="se">&lt;/span&gt;
+<span class="nt">--header</span> <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="se">&lt;/span&gt;
+<span class="nt">--header</span> <span class="s1">&#39;Authorization: Bearer JWT&#39;</span>
 </code></pre></div>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>This is example response:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+  </span><span class="nl">&quot;avgScore&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VERY_GOOD&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">&quot;avatar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;critical&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;You are so dep!&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;fullname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;D T L&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;ratingId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;ratingRole&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[COPIER, SUBSCRIBER]&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;ratingTcbsId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0001000012&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;replies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="nl">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;updatedTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yyyy-MM-dd HH:mm:ss&quot;</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">&quot;first&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;hasNext&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;hasPrevious&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;last&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;numberOfElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;totalElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;totalPages&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">&quot;rankCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;tcbsId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+</span></code></pre></div><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET /account-relation/e/v1/traders/{tcbsID}/rating</code></p>
+<h3 id='parameters-2'>Parameters</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Name</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>tcbsID * <br/> string <br/> (path)</td>
+<td>tcbsID</td>
+</tr>
+<tr>
+<td>ratingTcbsId <br/> string <br/> (query)</td>
+<td>ratingTcbsId</td>
+</tr>
+<tr>
+<td>ratingRole <br/> string <br/> (query)</td>
+<td>ratingRole</td>
+</tr>
+<tr>
+<td>page <br/> integer($int32) <br/> (query)</td>
+<td>page <br/> <em>Default value</em> : 0</td>
+</tr>
+<tr>
+<td>size <br/> integer($int32) <br/> (query)</td>
+<td>size <br/> <em>Default value</em> : 0</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span> <span class="se">\</span>
-  <span class="nt">-X</span> DELETE <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<h3 id='response-2'>Response</h3>
+<table><thead>
+<tr>
+<th>Trường</th>
+<th>Cách tính</th>
+<th>Mô tả</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>avgScore</td>
+<td>icopy.customerRatingSummary.totalScore / icopy.customerRatingSummary.totalScoring</td>
+<td>điểm trung bình</td>
+</tr>
+<tr>
+<td>code</td>
+<td></td>
+<td>code đánh giá dựa theo điểm TB</td>
+</tr>
+<tr>
+<td>rankCode</td>
+<td></td>
+<td>null</td>
+</tr>
+<tr>
+<td>tcbsId</td>
+<td>CUSTOMER_RATING.TCBSID</td>
+<td>TCBS ID của trader</td>
+</tr>
+<tr>
+<td>data.first</td>
+<td>là trang đầu tiên</td>
+<td>phân trang</td>
+</tr>
+<tr>
+<td>data.hasNext</td>
+<td>có trang tiếp theo</td>
+<td>phân trang</td>
+</tr>
+<tr>
+<td>data.hasPrevious</td>
+<td>có trang liền trước</td>
+<td>phân trang</td>
+</tr>
+<tr>
+<td>data.last</td>
+<td>là trang cuối</td>
+<td>phân trang</td>
+</tr>
+<tr>
+<td>data.number</td>
+<td>số trang</td>
+<td>phân trang</td>
+</tr>
+<tr>
+<td>data.numberOfElements</td>
+<td>số lượng trong content</td>
+<td>phân trang</td>
+</tr>
+<tr>
+<td>data.size</td>
+<td>kích thước trang</td>
+<td>phân trang</td>
+</tr>
+<tr>
+<td>data.totalElements</td>
+<td>tổng số phần tử</td>
+<td>phân trang</td>
+</tr>
+<tr>
+<td>data.totalPages</td>
+<td>tổng số trang</td>
+<td>phân trang</td>
+</tr>
+<tr>
+<td>data.content.avatar</td>
+<td>icopy.traderListingItem.accountInfo.avatar</td>
+<td>avatar người đánh giá</td>
+</tr>
+<tr>
+<td>data.content.critical</td>
+<td>CUSTOMER_RATING.CRITICAL</td>
+<td>nội dung đánh giá</td>
+</tr>
+<tr>
+<td>data.content.fullname</td>
+<td>icopy.traderListingItem.accountInfo.fullname</td>
+<td>tên người đánh giá</td>
+</tr>
+<tr>
+<td>data.content.ratingId</td>
+<td>CUSTOMER_RATING.ID</td>
+<td>ID</td>
+</tr>
+<tr>
+<td>data.content.ratingRole</td>
+<td>CUSTOMER_RATING.RATING_ROLE</td>
+<td>role (COPIER/SUBSCRIBER )</td>
+</tr>
+<tr>
+<td>data.content.ratingTcbsId</td>
+<td>CUSTOMER_RATING.RATING_TCBSID</td>
+<td>TCBSID của trader</td>
+</tr>
+<tr>
+<td>data.content.score</td>
+<td>CUSTOMER_RATING.SCORE</td>
+<td>điểm</td>
+</tr>
+<tr>
+<td>data.content.updatedTime</td>
+<td>CUSTOMER_RATING.UPDATED_TIME</td>
+<td>timestamp</td>
+</tr>
+<tr>
+<td>data.content.replies</td>
+<td>MESSAGE_REPLY</td>
+<td>danh sách các reply của trader, object tương tự Phản hồi đánh giá của trader</td>
+</tr>
+</tbody></table>
+<h2 id='xoa-danh-gia-trader'>Xóa đánh giá trader</h2>
+<blockquote>
+<p>This is example curl:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--location</span> <span class="nt">--request</span> GET <span class="s1">&#39;https://apiextsit.tcbs.com.vn/icopy/relation/v1/traders/0001098985/rating?ratingTcbsId=0001409989&#39;</span> <span class="se">&lt;/span&gt;
+<span class="nt">--header</span> <span class="s1">&#39;Accept-language: vi&#39;</span> <span class="se">&lt;/span&gt;
+<span class="nt">--header</span> <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="se">&lt;/span&gt;
+<span class="nt">--header</span> <span class="s1">&#39;Authorization: Bearer JWT&#39;</span>
 </code></pre></div>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>This is example response:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+  </span><span class="nl">&quot;avgScore&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VERY_GOOD&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">&quot;avatar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;critical&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;You are so dep!&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;fullname&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;D T L&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;ratingId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;ratingRole&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[COPIER, SUBSCRIBER]&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;ratingTcbsId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0001000012&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;replies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="nl">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="nl">&quot;updatedTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;yyyy-MM-dd HH:mm:ss&quot;</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">&quot;first&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;hasNext&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;hasPrevious&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;last&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;numberOfElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;totalElements&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">&quot;totalPages&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">&quot;rankCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w">
+  </span><span class="nl">&quot;tcbsId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+</span></code></pre></div><h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET /account-relation/e/v1/traders/{tcbsID}/rating</code></p>
+<h3 id='parameters-3'>Parameters</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Name</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>tcbsID * <br/> string <br/> (path)</td>
+<td>tcbsID</td>
+</tr>
+<tr>
+<td>ratingTcbsId <br/> string <br/> (query)</td>
+<td>ratingTcbsId</td>
+</tr>
+<tr>
+<td>ratingRole <br/> string <br/> (query)</td>
+<td>ratingRole</td>
+</tr>
+<tr>
+<td>page <br/> integer($int32) <br/> (query)</td>
+<td>page <br/> <em>Default value</em> : 0</td>
+</tr>
+<tr>
+<td>size <br/> integer($int32) <br/> (query)</td>
+<td>size <br/> <em>Default value</em> : 0</td>
 </tr>
 </tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
-
-<p>The Kittn API uses the following error codes:</p>
-
+<h3 id='response-3'>Response</h3>
 <table><thead>
 <tr>
-<th>Error Code</th>
-<th>Meaning</th>
+<th>Trường</th>
+<th>Cách tính</th>
+<th>Mô tả</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
+<td>avgScore</td>
+<td>icopy.customerRatingSummary.totalScore / icopy.customerRatingSummary.totalScoring</td>
+<td>điểm trung bình</td>
 </tr>
 <tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
+<td>code</td>
+<td></td>
+<td>code đánh giá dựa theo điểm TB</td>
 </tr>
 <tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+<td>rankCode</td>
+<td></td>
+<td>null</td>
 </tr>
 <tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
+<td>tcbsId</td>
+<td>CUSTOMER_RATING.TCBSID</td>
+<td>TCBS ID của trader</td>
 </tr>
 <tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+<td>data.first</td>
+<td>là trang đầu tiên</td>
+<td>phân trang</td>
 </tr>
 <tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+<td>data.hasNext</td>
+<td>có trang tiếp theo</td>
+<td>phân trang</td>
 </tr>
 <tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
+<td>data.hasPrevious</td>
+<td>có trang liền trước</td>
+<td>phân trang</td>
 </tr>
 <tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
+<td>data.last</td>
+<td>là trang cuối</td>
+<td>phân trang</td>
 </tr>
 <tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+<td>data.number</td>
+<td>số trang</td>
+<td>phân trang</td>
 </tr>
 <tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+<td>data.numberOfElements</td>
+<td>số lượng trong content</td>
+<td>phân trang</td>
 </tr>
 <tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+<td>data.size</td>
+<td>kích thước trang</td>
+<td>phân trang</td>
+</tr>
+<tr>
+<td>data.totalElements</td>
+<td>tổng số phần tử</td>
+<td>phân trang</td>
+</tr>
+<tr>
+<td>data.totalPages</td>
+<td>tổng số trang</td>
+<td>phân trang</td>
+</tr>
+<tr>
+<td>data.content.avatar</td>
+<td>icopy.traderListingItem.accountInfo.avatar</td>
+<td>avatar người đánh giá</td>
+</tr>
+<tr>
+<td>data.content.critical</td>
+<td>CUSTOMER_RATING.CRITICAL</td>
+<td>nội dung đánh giá</td>
+</tr>
+<tr>
+<td>data.content.fullname</td>
+<td>icopy.traderListingItem.accountInfo.fullname</td>
+<td>tên người đánh giá</td>
+</tr>
+<tr>
+<td>data.content.ratingId</td>
+<td>CUSTOMER_RATING.ID</td>
+<td>ID</td>
+</tr>
+<tr>
+<td>data.content.ratingRole</td>
+<td>CUSTOMER_RATING.RATING_ROLE</td>
+<td>role (COPIER/SUBSCRIBER )</td>
+</tr>
+<tr>
+<td>data.content.ratingTcbsId</td>
+<td>CUSTOMER_RATING.RATING_TCBSID</td>
+<td>TCBSID của trader</td>
+</tr>
+<tr>
+<td>data.content.score</td>
+<td>CUSTOMER_RATING.SCORE</td>
+<td>điểm</td>
+</tr>
+<tr>
+<td>data.content.updatedTime</td>
+<td>CUSTOMER_RATING.UPDATED_TIME</td>
+<td>timestamp</td>
+</tr>
+<tr>
+<td>data.content.replies</td>
+<td>MESSAGE_REPLY</td>
+<td>danh sách các reply của trader, object tương tự Phản hồi đánh giá của trader</td>
 </tr>
 </tbody></table>
+<h2 id='ph-n-h-i-danh-gia-c-a-trader'>Phản hồi đánh giá của trader</h2><h2 id='s-a-ph-n-h-i-danh-gia-c-a-trader-theo-id'>Sửa phản hồi đánh giá của trader theo ID</h2><h2 id='xoa-toan-b-ph-n-h-i-danh-gia-c-a-trader'>Xóa toàn bộ phản hồi đánh giá của trader</h2><h2 id='xoa-1-ph-n-h-i-danh-gia-c-a-trader-theo-id'>Xóa 1 phản hồi đánh giá của trader theo ID</h2></p></p>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
     </div>
