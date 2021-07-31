@@ -1,0 +1,79 @@
+# Following module
+
+## Follow
+
+> This is example curl:
+
+```shell
+curl --location --request POST 'https://apiextsit.tcbs.com.vn/icopy/relation/v1/copiers/follow' \
+--header 'Authorization: Bearer JWT' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+ "followerTcbsId": "0001409989",
+ "traderId": 123
+}'
+```
+
+> This is example response:
+
+```json
+{
+  "followerId": 0,
+  "traderId": 0
+}
+```
+### HTTP Request
+
+`POST /account-relation/e/v1/copiers/follow`
+
+### Parameters
+
+Name | Description
+--|--
+reqDto * <br/> object <br/> (body) | request dto
+
+### Response
+
+Trường | Cách tính | Mô tả
+--|--|--
+followerId | ACCOUNT_RELATION.ID | follow ID
+traderId | TRADER_ACCOUNT.ID | trader ID
+
+## Unfollow
+
+> This is example curl:
+
+```shell
+curl --location --request POST 'https://apiextsit.tcbs.com.vn/icopy/relation/v1/copiers/follow' \
+--header 'Authorization: Bearer JWT' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+ "followerTcbsId": "0001409989",
+ "traderId": 123
+}'
+```
+
+> This is example response:
+
+```json
+{
+  "followerId": 0,
+  "traderId": 0
+}
+```
+### HTTP Request
+
+`POST /account-relation/e/v1/copiers/un-follow`
+
+### Parameters
+
+Name | Description
+--|--
+reqDto * <br/> object <br/> (body) | request dto
+
+### Response
+
+Trường | Cách tính | Mô tả
+--|--|--
+followerId | ACCOUNT_RELATION.ID | follow ID
+traderId | TRADER_ACCOUNT.ID | trader ID
